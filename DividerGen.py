@@ -1,3 +1,5 @@
+#!/bin/python3
+
 import sys
 
 def getModule(moduleName, divisor, inputWidth, radixWidth):
