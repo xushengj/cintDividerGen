@@ -83,7 +83,7 @@ endgenerate
 logic [$clog2(NUM_SLICE)-1:0] slice_index_first, slice_index_next, slice_index_d, slice_index_q;
 always_comb begin
   slice_index_first = 0;
-  for (int unsigned j = NUM_SLICE-1; j > 0; ++j) begin
+  for (int unsigned j = NUM_SLICE-1; j > 0; --j) begin
     if (!slice_zero[j]) begin
       slice_index_first = slice_full[j]? j : (j-1);
       break;
